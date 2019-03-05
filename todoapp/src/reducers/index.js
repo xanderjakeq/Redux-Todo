@@ -2,18 +2,7 @@ import uniqueKey from 'unique-key'
 import {ADD_TODO, DELETE_TODO, TOGGLE_COMPLETE} from '../actions'
 
 const initialState = {
-    todos: [
-        {
-            value: 'TODO Item',
-            isCompleted: false,
-            id: 'random Key'
-        },
-        {
-            value: 'TODO Item',
-            isCompleted: false,
-            id: 'random Key 2'
-        }
-    ]
+    todos: []
 }
 
 export default (state = initialState, action) => {
