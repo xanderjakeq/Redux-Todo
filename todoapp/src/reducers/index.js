@@ -21,7 +21,7 @@ export default (state = initialState, action) => {
         case ADD_TODO:
             return {
                 ...state,
-                todos: [...state.todos, {value: action.todo, isCompleted: false, id: uniqueKey(64, 'todo-')}]
+                todos: [{value: action.todo, isCompleted: false, id: uniqueKey(64, 'todo-')}, ...state.todos]
             }
         case DELETE_TODO:
             return {
@@ -32,7 +32,7 @@ export default (state = initialState, action) => {
             return{
                 ...state,
                 todos: state.todos.map((todo, idx) => {
-                   if(idx === action.idx){
+                   if(todo.id === action.id){
                        return {
                            ...todo,
                            isCompleted: !todo.isCompleted

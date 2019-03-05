@@ -1,33 +1,86 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+}
+.App {
+  position: absolute;
+  top: 30%;
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.App form input {
+  border: none;
+  border-bottom: 2px solid turquoise;
+  padding: 5px;
+  font-family: inherit;
+  font-size: 2em;
+}
+.App form input:focus {
+  outline: none;
+  border-bottom: 5px solid turquoise;
+}
+.App ul {
+  padding: 0;
+}
+.App ul li {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.App ul li svg {
+  cursor: pointer;
+}
+.App ul li p {
+  max-width: 300px;
+  padding: 0 20px;
+  font-size: 1.5em;
+}
+.App ul li .complete {
+  text-decoration: line-through;
+}
+.App ul li .deleteButton {
+  position: absolute;
+  right: 0;
+}
+.App .sideBar {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.App .sideBar .addButton {
+  align-self: flex-start;
+  background: none;
+  border: 2px solid black;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 2em;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .sideBar .addButton:hover {
+  border-bottom: 3px solid black;
+  border-top: 1px solid black;
+}
+.App .toggleDisplay {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 5px 0;
+}
+.App .toggleDisplay:focus {
+  outline: none;
+}
+.App .stats {
+  font-size: 2em;
+  margin: 0;
+}
+.App .stats li {
+  text-align: center;
+  height: 100px;
+}
+.App .stats p {
+  width: fit-content;
 }

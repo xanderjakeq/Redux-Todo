@@ -16,9 +16,9 @@ export const deleteTodo = (id) => {
     }
 }
 
-export const toggleComplete = (idx) => {
+export const toggleComplete = (id) => {
     return {
         type: TOGGLE_COMPLETE,
-        idx: idx
+        id: id
     }
 }
