@@ -55,7 +55,7 @@ class App extends Component {
       <div className="App">
         <div>
             <form onSubmit = {this.handleSubmit}>
-              <input type='text' name='newtodo' value = {this.state.newtodo} onChange = {this.handleChange}/>
+              <input placeholder = 'New Task' type='text' name='newtodo' value = {this.state.newtodo} onChange = {this.handleChange}/>
             </form>
             <ul>
               {this.state.showAll ? this.props.todos.map((todo, idx) => {
