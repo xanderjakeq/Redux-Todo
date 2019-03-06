@@ -31,6 +31,7 @@
 @media (max-width: 500px) {
   .App form input {
     width: 100%;
+    padding-right: 63px;
   }
 }
 .App ul {
@@ -50,6 +51,12 @@
   max-width: 300px;
   padding: 0 20px;
   font-size: 1.5em;
+}
+@media (max-width: 500px) {
+  .App ul li p {
+    max-width: 100%;
+    word-break: break-word;
+  }
 }
 .App ul li .complete {
   text-decoration: line-through;
