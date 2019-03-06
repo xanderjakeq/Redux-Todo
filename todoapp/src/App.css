@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.App {
+  position: absolute;
+  top: 30%;
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.App form input {
+  border: none;
+  border-bottom: 2px solid turquoise;
+  padding: 5px;
+  font-family: inherit;
+  font-size: 2em;
+}
+.App form input:focus {
+  outline: none;
+  border-bottom: 5px solid turquoise;
+}
+@media (max-width: 500px) {
+  .App form input {
+    width: 100%;
+    padding-right: 63px;
+  }
+}
+.App ul {
+  padding: 0;
+}
+.App ul li {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.App ul li svg {
+  cursor: pointer;
+}
+.App ul li p {
+  max-width: 300px;
+  padding: 0 20px;
+  font-size: 1.5em;
+  word-break: break-word;
+}
+.App ul li .complete {
+  text-decoration: line-through;
+}
+.App ul li .deleteButton {
+  position: absolute;
+  right: 0;
+}
+@media (max-width: 500px) {
+  .App ul li {
+    margin: 5px;
+  }
+}
+.App .sideBar {
+  display: flex;
+  flex-direction: column;
+}
+.App .sideBar .addButton {
+  align-self: flex-start;
+  background: none;
+  border: 2px solid black;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 2em;
+}
+.App .sideBar .addButton:hover {
+  border-bottom: 3px solid black;
+  border-top: 1px solid black;
+}
+@media (max-width: 500px) {
+  .App .sideBar .addButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+.App .toggleDisplay {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 5px 0;
+}
+.App .toggleDisplay:focus {
+  outline: none;
+}
+@media (max-width: 500px) {
+  .App .toggleDisplay {
+    position: absolute;
+    top: -60px;
+    right: 20px;
+  }
+}
+.App .stats {
+  font-size: 2em;
+  margin: 0;
+}
+.App .stats li {
+  text-align: center;
+  height: 100px;
+}
+.App .stats p {
+  width: fit-content;
+}
+@media (max-width: 500px) {
+  .App .stats {
+    position: absolute;
+    display: flex;
+    top: -90px;
+  }
+}
+@media (max-width: 500px) {
+  .App {
+    display: block;
+    width: 100%;
+  }
+}

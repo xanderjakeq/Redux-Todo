@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    @media (max-width: 500px){
+        
+    }
+}
+
+.App{
+    position: absolute;
+    top: 30%;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+
+    font-family: 'Courier New', Courier, monospace;
+    form{
+        input{
+            border: none;
+            border-bottom: 2px solid turquoise;
+            padding: 5px;
+
+            font-family: inherit;
+            font-size: 2em;
+
+            &:focus{
+                outline: none;
+                border-bottom: 5px solid turquoise;
+            }
+
+            @media (max-width: 500px){
+                width: 100%;
+                padding-right: 63px;
+            }
+        }
+    }
+
+    ul {
+        padding: 0;
+        li{
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            position: relative;
+
+            svg{
+                cursor: pointer;
+            }
+
+            p{
+                max-width: 300px;
+                padding: 0 20px;
+                font-size: 1.5em;
+                word-break: break-word;
+                
+            }
+            
+            .complete {
+                text-decoration: line-through;
+            }
+
+            .deleteButton{
+               position: absolute;
+               right: 0; 
+            }
+            @media (max-width: 500px){
+                margin: 5px;
+            }
+        }
+    }
+
+    .sideBar{
+        display: flex;
+        flex-direction: column;
+
+        .addButton{
+            align-self: flex-start;
+
+            background: none;
+            border: 2px solid black;
+            cursor: pointer;
+            
+            font-family: inherit;
+            font-size: 2em;
+
+            &:hover{
+                border-bottom: 3px solid black;
+                border-top: 1px solid black;
+            }
+
+            @media (max-width: 500px){
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+
+    .toggleDisplay{
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 5px 0;
+
+        &:focus{
+            outline:none;
+        }
+
+        @media (max-width: 500px){
+            position: absolute;
+            top: -60px;
+            right: 20px;
+        }
+    }
+
+    .stats {
+        font-size: 2em;
+        margin: 0;
+        li{
+            text-align: center;
+            height: 100px;
+
+            
+        }
+        p{
+            width: fit-content;
+        }
+
+        @media (max-width: 500px){
+            position: absolute;
+            display: flex;
+            top: -90px;   
+        }
+    }
+    @media (max-width: 500px){
+        display: block;
+        width: 100%;
+    }   
+    
+}
