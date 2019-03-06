@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 #root {
   display: flex;
   justify-content: center;
@@ -22,6 +27,11 @@
 .App form input:focus {
   outline: none;
   border-bottom: 5px solid turquoise;
+}
+@media (max-width: 500px) {
+  .App form input {
+    width: 100%;
+  }
 }
 .App ul {
   padding: 0;
@@ -48,6 +58,11 @@
   position: absolute;
   right: 0;
 }
+@media (max-width: 500px) {
+  .App ul li {
+    margin: 5px;
+  }
+}
 .App .sideBar {
   display: flex;
   flex-direction: column;
@@ -64,6 +79,13 @@
   border-bottom: 3px solid black;
   border-top: 1px solid black;
 }
+@media (max-width: 500px) {
+  .App .sideBar .addButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
 .App .toggleDisplay {
   background: none;
   border: none;
@@ -72,6 +94,13 @@
 }
 .App .toggleDisplay:focus {
   outline: none;
+}
+@media (max-width: 500px) {
+  .App .toggleDisplay {
+    position: absolute;
+    top: -60px;
+    right: 20px;
+  }
 }
 .App .stats {
   font-size: 2em;
@@ -83,4 +112,17 @@
 }
 .App .stats p {
   width: fit-content;
+}
+@media (max-width: 500px) {
+  .App .stats {
+    position: absolute;
+    display: flex;
+    top: -90px;
+  }
+}
+@media (max-width: 500px) {
+  .App {
+    display: block;
+    width: 100%;
+  }
 }
